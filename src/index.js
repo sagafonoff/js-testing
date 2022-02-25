@@ -1,9 +1,11 @@
-const component = (personsName) => {
+function greet(firstName) {
   const defaultGreeting = "Hi!";
-  if (!personsName || typeof personsName !== "string") {
+  if (!firstName || typeof firstName !== "string") {
     return defaultGreeting;
   }
-  return `${defaultGreeting} ${personsName}`;
-};
+  return `${defaultGreeting} ${firstName}`;
+}
+
+const component = (personsName) => greet(personsName);
 
 module.exports = component;
