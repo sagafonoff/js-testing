@@ -3,6 +3,9 @@ function greet(firstName) {
   if (!firstName || typeof firstName !== "string") {
     return defaultGreeting;
   }
+
+  firstName = firstName.split(" ")[0];
+
   return `${defaultGreeting} ${firstName}`;
 }
 

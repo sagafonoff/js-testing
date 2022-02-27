@@ -39,7 +39,7 @@ describe("The application behaviour", () => {
   // now, what if you want to make sure we only give their first name?
   test("the return to contain only the first name", () => {
     const result = comp("Fred Smith");
-    expect(result).toBe("Hi Fred");
+    expect(result).toBe(`${defaultGreeting} Fred`);
   });
 
   // also, do we want to make sure the first name is capatalized?
