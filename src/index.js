@@ -4,7 +4,11 @@ function greet(firstName) {
     return defaultGreeting;
   }
 
-  firstName = firstName.split(" ")[0];
+  // Extract only the first name
+  firstName = firstName.split(" ")[0].trim();
+
+  // Capitalize the first letter
+  firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1);
 
   return `${defaultGreeting} ${firstName}`;
 }

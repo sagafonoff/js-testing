@@ -43,4 +43,8 @@ describe("The application behaviour", () => {
   });
 
   // also, do we want to make sure the first name is capatalized?
+  test("the first name is capitalized", () => {
+    const result = comp("fred smith");
+    expect(result).toBe(`${defaultGreeting} Fred`);
+  });
 });
