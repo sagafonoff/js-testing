@@ -35,4 +35,12 @@ describe("The application behaviour", () => {
     const result = comp([0]);
     expect(result).toBe(defaultGreeting);
   });
+
+  // now, what if you want to make sure we only give their first name?
+  test("the return to contain only the first name", () => {
+    const result = comp("Fred Smith");
+    expect(result).toBe("Hi Fred");
+  });
+
+  // also, do we want to make sure the first name is capatalized?
 });
