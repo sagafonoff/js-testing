@@ -1,5 +1,7 @@
 function greet(firstName) {
   const defaultGreeting = "Hi!";
+  const validation = new RegExp(/^[a-zA-Z]+$/);
+
   if (!firstName || typeof firstName !== "string") {
     return defaultGreeting;
   }
@@ -9,6 +11,10 @@ function greet(firstName) {
 
   // Capitalize the first letter
   firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1);
+
+  if (!validation.test(firstName)) {
+    return defaultGreeting;
+  }
 
   return `${defaultGreeting} ${firstName}`;
 }

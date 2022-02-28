@@ -47,4 +47,9 @@ describe("The application behaviour", () => {
     const result = comp("fred smith");
     expect(result).toBe(`${defaultGreeting} Fred`);
   });
+
+  test("no empty spaces", () => {
+    const result = comp(" ");
+    expect(result).toBe(defaultGreeting);
+  });
 });
