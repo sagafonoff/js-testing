@@ -11,7 +11,11 @@ const Greeting = () => {
   const handleChange = (ev) => {
     ev.preventDefault();
     setPersonsName(ev.currentTarget.value);
-    setGreeting(greet(ev.currentTarget.value));
+  };
+
+  const handleClick = (ev) => {
+    ev.preventDefault();
+    setGreeting(greet(personsName));
   };
 
   return (
@@ -22,6 +26,7 @@ const Greeting = () => {
         aria-label="persons-name"
         onChange={handleChange}
       />
+      <button aria-label="submit-name" onClick={handleClick} value="Say Hi" />
     </div>
   );
 };
